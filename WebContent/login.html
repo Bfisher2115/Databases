@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ body { 
+ 	background-color:#C63D0F;
+}
+</style>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Hulton Hotels</title>
+<br>
+<script type="text/javascript">
+function validate_form1(){
+	var username = document.forms["form1"]["username"].value;
+	var password = document.forms["form1"]["passsword"].value;
+	return true;
+}
+function validate_form2(){
+	var username = document.forms["form2"]["username"].value;
+	var password = document.forms["form2"]["passsword"].value;
+	var firstname = document.forms["form2"]["username"].value;
+	var lastname = document.forms["form2"]["passsword"].value;
+	var phonenumber = document.forms["form2"]["username"].value;
+	var email = document.forms["form2"]["passsword"].value;
+	return true;
+}
+</script>
+</head>
+<body>
+<h1 align="center">Hotel Reservation System</h1>
+<hr>
+<ul>
+</ul>
+
+<form name="form1" action="check_hotel.jsp" method="post" onsubmit ="return validate_form1()">
+	<h2 align="center">Login Below</h2>
+	<div align="center">
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input name ="username" placeholder="Username" required></td>
+
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input name="password" placeholder="Password"></td>
+
+			</tr>
+		</table>
+	</div>
+	<div align="center">
+	<input type="submit" value="Login">
+	</div>
+</form>
+</body>
+<h4 align="center">--------------------------------------------------------------------------</h4>
+<form name="form2" action="home.html" method="post" onsubmit ="return validate_form2()">
+	<h2 align="center">First time user? Register here!</h2>
+	<div align="center">
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input name ="username" placeholder="Username" required></td>
+
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input name="password" placeholder="Password"></td>
+
+			</tr>
+			<tr>
+				<td>First Name</td>
+				<td><input name ="firstname" placeholder="firstname" required></td>
+
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input name="lastname" placeholder="lastname"></td>
+
+			</tr>
+			<tr>
+				<td>Phone Number</td>
+				<td><input name ="phonenumber" placeholder="phonenumber" required></td>
+
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input name="email" placeholder="email"></td>
+
+			</tr>
+		</table>
+	</div>
+	<div align="center">
+	<input type="submit" value="Register">
+	</div>
+</form>
+</body>
+</html>
