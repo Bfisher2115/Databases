@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+	body { 
+ 	background-color:#C63D0F;
+}
+
+form {
+ margin: 0 auto;
+ padding: 1em 0;
+ border: 1px solid black;
+
+}
+</style>
+
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <title>Hulton Hotels</title>
@@ -19,13 +32,17 @@ function validate_form(){
 </script>
 </head>
 <body>
-<h4 align="center">Hotel Reservation System</h4>
+<h1 align="center">Hulton Hotels</h1>
 <ul>
-  <li><a class="active" href="home.html">Home</a></li>
-  <li><a href="admin.html">Administrator</a></li>
+  <li><a href="profile.html">Profile</a></li>
+  <li><a class="active" href="reserve.html">Reservations</a></li>
+  <li><a href="review.html">Write a Review</a></li>
+  <li><a href="logout.html">Logout</a></li>
+  <li><a href="admin.html">Admins Only</a></li>
 </ul>
 
-<form name="form1" action="reg.jsp" method="post" onsubmit ="return validate_form()">
+<h2 align="center">Make a Reservation</h2>
+<form style="width: 400px" name="form1" action="reg.jsp" method="post" onsubmit ="return validate_form()">
 	<div align="center">
 		<table>
 			<tr>
@@ -77,7 +94,7 @@ function validate_form(){
 		</table>
 	</div>
 	<div align="center">
-	<input type="submit" value="Book">
+	<input type="submit" value="Reservation">
 	</div>
 </form>
 </body>

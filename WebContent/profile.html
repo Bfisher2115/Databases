@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ body { 
+ 	background-color:#C63D0F;
+}
+
+form {
+ margin: 0 auto;
+ padding: 1em 0;
+ border: 1px solid black;
+
+}
+</style>
+
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Hulton Hotels</title>
+<br>
+</head>
+<body>
+<h1 align="center">Hulton Hotels</h1>
+<ul>
+  <li><a class="active" href="profile.html">Profile</a></li>
+  <li><a href="reserve.html">Reservations</a></li>
+  <li><a href="review.html">Write a Review</a></li>
+  <li><a href="logout.html">Logout</a></li>
+  <li><a href="admin.html">Admins Only</a></li>
+</ul>
+<h2 align="center">Edit Info</h2>
+<form style="width: 300px" name="form1" action="reg.jsp" method="post" onsubmit ="return validate_form()">
+	<div align="center">
+		<table>
+			<tr>
+				<td>First Name:</td>
+				<td><input type="fname" name="fname" required></td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="lname" name="lname" required></td>
+			</tr>			
+			<tr>
+				<td>Phone Number:</td>
+				<td><input type="phonenum" name="phonenum" required></td>
+  				</td>
+			</tr>
+			<tr>
+				<td>State:</td>
+				<td><input type="state" name="state" required></td>
+  				</td>
+			</tr>
+			<tr>
+				<td>City:</td>
+				<td><input type="city" name="city" required></td>
+  				</td>
+			</tr>
+			<tr>
+				<td>Street Address:</td>
+				<td><input type="street" name="street" required></td>
+  				</td>
+			</tr>
+			<tr>
+				<td>Zip Code:</td>
+				<td><input type="zip" name="zip" required></td>
+  				</td>
+			</tr>
+		</table>
+	</div>
+	<div align="center">
+	<input type="submit" value="Submit">
+	</div>
+</form>
+<br>
+<hr COLOR="black">
+<h2 align="center">Current Reservations</h2>
+<form style="width: 300px" name="form2" action="reg.jsp" method="post" onsubmit ="return validate_form()">
+	<div align="center">
+		<table>
+			<tr>
+				<td>Cancel Room</td>
+				<td><input type="radio" name="room" required></td>
+			</tr>
+		</table>
+	</div>
+	<div align="center">
+	<input type="submit" value="Submit">
+	</div>
+</form>
+
+</body>
+</html>

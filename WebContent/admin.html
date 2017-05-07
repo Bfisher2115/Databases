@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ body { 
+ 	background-color:#C63D0F;
+}
+
+form {
+ margin: 0 auto;
+ padding: 1em 0;
+ border: 1px solid black;
+
+}
+
+</style>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Hulton Hotels</title>
+<br>
+</head>
+<body>
+<script type="text/javascript">	
+function validate_form(){
+	var check_in = document.forms["form1"]["check-in"].value;
+	var check_out = document.forms["form1"]["check-out"].value;
+	var date1 = new Date(check_in);
+	var date2 = new Date(check_out);
+	if (date2 < date1){
+		alert("Check-out date cannot be before check-in date");
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+
+
+<body>
+<h1 align="center">Hulton Hotels</h1>
+<ul>
+  <li><a href="profile.html">Profile</a></li>
+  <li><a href="reserve.html">Reservations</a></li>
+  <li><a href="review.html">Write a Review</a></li>
+  <li><a href="logout.html">Logout</a></li>
+  <li><a class="active" href="admin.html">Admins Only</a></li>
+</ul>
+<h2 align="center">Administor Page</h2>
+<hr COLOR="black">
+<h3 align="center">Request Statistics</h3>
+<form style="width: 800px" name="form1" action="reg.jsp" method="post" onsubmit ="return validate_form()">
+	<div align="center">
+		<table>
+			<tr>
+				<td>Check-in date:</td>
+				<td><input type="date" name="check-in" required></td>
+			</tr>
+			<tr>
+				<td>Check-out date:</td>
+				<td><input type="date" name="check-out" required></td>
+			</tr>			
+			<tr>
+				<td>Select Statistic</td>
+				<td>
+				<input type="radio" name="gender" value="roomType"> Highest Rated Room
+  				<input type="radio" name="gender" value="money"> Top 5 Customers
+  				<input type="radio" name="gender" value="bFast"> Highest Rated Breakfast
+  				<input type="radio" name="gender" value="service"> Highest Rated Service
+  				</td>
+			</tr>
+		</table>
+	</div>
+	<div align="center">
+	<input type="submit" value="Submit">
+	</div>
+</form>
+</body>
+</html>

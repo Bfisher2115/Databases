@@ -16,46 +16,52 @@
 </ul>
 <%
 //pull info from registration
-String f_name=request.getParameter("fname"); 
-String l_name = null;
-l_name = request.getParameter("lname");
-String gender = null;
-gender = request.getParameter("gender");
-String g = null;
-if(gender.equals("male")){
-	g = "M";
-}
-else if (gender.equals("female")){
-	g = "F";
-}
-else if (gender.equals("other")){
-	g = "O";
-}
-System.out.println(g);
+String firstname = request.getParameter("firstname");
+String lastname = request.getParameter("lastname");
+String phone = request.getParameter("phonenumber");
 String email = request.getParameter("email");
-String phone = request.getParameter("phone");
-//int phone_no = Integer.parseInt(phone);
-String check_in = request.getParameter("check-in");
-String check_out = request.getParameter("check-out");
-String room_type = request.getParameter("room_type");
-String user_name = f_name +" "+l_name;
+String password = request.getParameter("password");
+Connection con =null;
+Statement st = null;
 try{
 Class.forName("com.mysql.jdbc.Driver"); 
 //connect to the db
-Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hoteldb?useSSL=false","root","password"); 
-Statement st= con.createStatement(); 
-String query_string = "insert into customer values (NULL,'"+email+"',NULL,NULL,'"+f_name+"''"+l_name+"')";
+// TODO: change root to username for mysql and password to password
+con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hoteldb?useSSL=false","root","password"); 
+st = con.createStatement(); 
+String query_string = "insert into customer values (NULL,'"+email+"',NULL,NULL,'"+firstname+""+lastname+"')";
 System.out.println(query_string);
-int i=st.executeUpdate(query_string); 
+int i = st.executeUpdate(query_string); 
 if (i > 0){
-	out.println("Hello "+user_name+", your booking is done successfully");
+	out.println("Hello "+firstname+", your profile has been updated");
 }
 else{
-	out.println("Hello "+user_name+", your booking could not be completed. Sorry for the inconvenience");
-	}
+	out.println("Hello "+firstname+", your booking could not be completed. Sorry for the inconvenience");
+	throw new IOException("bad input");
+}
+// add new login instance
+query_string = "insert into login values('"+email+"','"+password+"')";
+i = st.executeUpdate(query_string);
+if (i > 0){
+	out.println("Your login credntials have been saved");
+}
+else{
+	out.println("Failed to store login credentials");
+}
 }
 catch(Exception e){
 	e.printStackTrace();
+}finally {
+	if(st != null){
+		try{
+			st.close();
+		} catch(SQLException e){}
+	}
+	if(con != null){
+		try{
+			con.close();
+		} catch(SQLException e){}
+	}
 }
 %>
 </body>

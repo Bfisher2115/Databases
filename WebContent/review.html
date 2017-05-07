@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ body { 
+ 	background-color:#C63D0F;
+}
+
+form {
+ margin: 0 auto;
+ padding: 1em 0;
+ border: 1px solid black;
+
+}
+</style>
+
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Hulton Hotels</title>
+<br>
+</head>
+<body>
+<h1 align="center">Hulton Hotels</h1>
+<ul>
+  <li><a href="profile.html">Profile</a></li>
+  <li><a href="reserve.html">Reservations</a></li>
+  <li><a class="active" href="review.html">Write a Review</a></li>
+  <li><a href="logout.html">Logout</a></li>
+  <li><a href="admin.html">Admins Only</a></li>
+</ul>
+<h3 align="center">Review your room</h3>
+<form style="width: 370px" name="form1" action="reg.jsp" method="post" onsubmit ="return validate_form()">
+	<div align="center">
+		<table>
+			<tr>
+				<td>
+				<input type="radio" name="roomrating" value="1star"> 1 Star
+  				<input type="radio" name="roomrating" value="2stars"> 2 Stars
+  				<input type="radio" name="roomrating" value="3stars"> 3 Stars
+  				<input type="radio" name="roomrating" value="4stars"> 4 Stars
+  				<input type="radio" name="roomrating" value="5stars"> 5 Stars
+  				</td>
+			</tr>
+		</table>
+	</div>
+	<div align="center">
+	<input type="submit" value="Submit">
+	</div>
+</form>
+<br>
+<hr COLOR="black">
+<h3 align="center">Review your breakfast</h3>
+<form style="width: 370px" name="form2" action="reg.jsp" method="post" onsubmit ="return validate_form()">
+	<div align="center">
+		<table>
+			<tr>
+				<td>
+				<input type="radio" name="bfastrating" value="1star"> 1 Star
+  				<input type="radio" name="bfastrating" value="2stars"> 2 Stars
+  				<input type="radio" name="bfastrating" value="3stars"> 3 Stars
+  				<input type="radio" name="bfastrating" value="4stars"> 4 Stars
+  				<input type="radio" name="bfastrating" value="5stars"> 5 Stars
+  				</td>
+			</tr>			
+		</table>
+	</div>
+	<div align="center">
+	<input type="submit" value="Submit">
+	</div>
+</form>
+<br>
+<hr COLOR="black">
+<h3 align="center">Review a service</h3>
+<form style="width: 370px" name="form3" action="reg.jsp" method="post" onsubmit ="return validate_form()">
+	<div align="center">
+		<table>			
+			<tr>
+				<td>
+				<input type="radio" name="service" value="1star"> Wi-fi
+  				<input type="radio" name="service" value="2stars"> Room Service
+  				<input type="radio" name="service" value="3stars"> Mini Bar
+  				</td>
+  			</tr>
+  			<tr>
+				<td>
+				<input type="radio" name="servicerating" value="1star"> 1 Star
+  				<input type="radio" name="servicerating" value="2stars"> 2 Stars
+  				<input type="radio" name="servicerating" value="3stars"> 3 Stars
+  				<input type="radio" name="servicerating" value="4stars"> 4 Stars
+  				<input type="radio" name="servicerating" value="5stars"> 5 Stars
+  				</td>
+			</tr>
+		</table>
+	</div>
+	<div align="center">
+	<input type="submit" value="Submit">
+	</div>
+</form>
+</body>
+</html>

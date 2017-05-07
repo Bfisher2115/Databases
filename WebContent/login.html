@@ -33,7 +33,7 @@ function validate_form2(){
 <ul>
 </ul>
 
-<form name="form1" action="check_hotel.jsp" method="post" onsubmit ="return validate_form1()">
+<form name="form1" action="check_login.jsp" method="post" onsubmit ="return validate_form1()">
 	<h2 align="center">Login Below</h2>
 	<div align="center">
 		<table>
@@ -55,20 +55,10 @@ function validate_form2(){
 </form>
 </body>
 <h4 align="center">--------------------------------------------------------------------------</h4>
-<form name="form2" action="home.html" method="post" onsubmit ="return validate_form2()">
+<form name="form2" action="reg.jsp" method="post" onsubmit ="return validate_form2()">
 	<h2 align="center">First time user? Register here!</h2>
 	<div align="center">
 		<table>
-			<tr>
-				<td>Username</td>
-				<td><input name ="username" placeholder="Username" required></td>
-
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input name="password" placeholder="Password"></td>
-
-			</tr>
 			<tr>
 				<td>First Name</td>
 				<td><input name ="firstname" placeholder="firstname" required></td>
@@ -87,6 +77,11 @@ function validate_form2(){
 			<tr>
 				<td>Email</td>
 				<td><input name="email" placeholder="email"></td>
+
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input name="password" placeholder="password"></td>
 
 			</tr>
 		</table>
