@@ -5,7 +5,15 @@
  body { 
  	background-color:#C63D0F;
 }
+
+form {
+ margin: 0 auto;
+ padding: 1em 0;
+ border: 1px solid black;
+
+}
 </style>
+
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <title>Hulton Hotels</title>
@@ -28,25 +36,21 @@ function validate_form2(){
 </script>
 </head>
 <body>
-<h1 align="center">Hotel Reservation System</h1>
-<hr>
+<h1 align="center">Hulton Hotels</h1>
 <ul>
+  <li><a href="profile.html">Profile</a></li>
+  <li><a href="reserve.html">Reservations</a></li>
+  <li><a href="review.html">Write a Review</a></li>
+  <li><a href="logout.html">Logout</a></li>
+  <li><a href="admin.html">Admins Only</a></li>
 </ul>
-
-<form name="form1" action="check_login.jsp" method="post" onsubmit ="return validate_form1()">
-	<h2 align="center">Login Below</h2>
+<br>
+<h2 align="center">Login Below</h2>
+<form style="width: 250px" name="form1" action="reg.jsp" method="post" onsubmit ="return validate_form1()">
 	<div align="center">
-		<table>
-			<tr>
-				<td>Username</td>
-				<td><input name ="username" placeholder="Username" required></td>
-
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input name="password" placeholder="Password"></td>
-
-			</tr>
+		<table action="">
+			Username: <input type="text" name="user"><br>
+			Password : <input type="password" name="password">
 		</table>
 	</div>
 	<div align="center">
@@ -54,34 +58,40 @@ function validate_form2(){
 	</div>
 </form>
 </body>
-<h4 align="center">--------------------------------------------------------------------------</h4>
-<form name="form2" action="reg.jsp" method="post" onsubmit ="return validate_form2()">
-	<h2 align="center">First time user? Register here!</h2>
+<br>
+<hr COLOR="black">
+<h2 align="center">First time user? Register here!</h2>
+<form style="width: 400px" name="form2" action="home.html" method="post" onsubmit ="return validate_form2()">
 	<div align="center">
 		<table>
 			<tr>
-				<td>First Name</td>
+				<td>Username:</td>
+				<td><input name ="username" placeholder="Username" required></td>
+
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input name="password" placeholder="Password"></td>
+
+			</tr>
+			<tr>
+				<td>First Name:</td>
 				<td><input name ="firstname" placeholder="firstname" required></td>
 
 			</tr>
 			<tr>
-				<td>Last Name</td>
+				<td>Last Name:</td>
 				<td><input name="lastname" placeholder="lastname"></td>
 
 			</tr>
 			<tr>
-				<td>Phone Number</td>
+				<td>Phone Number:</td>
 				<td><input name ="phonenumber" placeholder="phonenumber" required></td>
 
 			</tr>
 			<tr>
-				<td>Email</td>
+				<td>Email:</td>
 				<td><input name="email" placeholder="email"></td>
-
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input name="password" placeholder="password"></td>
 
 			</tr>
 		</table>

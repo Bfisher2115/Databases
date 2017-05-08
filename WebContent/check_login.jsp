@@ -38,6 +38,8 @@ try{
 	}
 	if (rs.getString(1).equals(username) && rs.getString(2).equals(pass)){
 		out.println("Login success!");
+	    String redirectURL = "http://whatever.com/myJSPFile.jsp";
+	    response.sendRedirect(redirectURL);
 	}
 }catch(Exception e){
 	e.printStackTrace();
